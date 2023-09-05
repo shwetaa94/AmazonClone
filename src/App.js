@@ -18,10 +18,11 @@ function App() {
        <Route path='/checkout' element={<Checkout/>} />
        <Route path ='/login'  element={<Login/>} />
        
-       <Route path='/all' element={<Product/>} /> 
+       {/* <Route path='/all' element={<Product/>} />  */}
        <Route path='/' element={<Product/>} /> 
        <Route path='/:type' element={<ProductList/>} /> 
-       <Route path='/:id' element={<ProductSinglePage/>} /> 
+       <Route path='id/:id' element={<ProductSinglePage/>} /> 
+       <Route path='type/:id' element={<ProductSinglePage/>} /> 
 
        
 

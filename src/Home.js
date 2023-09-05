@@ -7,26 +7,26 @@ const Home = () => {
     <>
       <div className="header_bottom">
         <ul className="bottomlist">
-        <Link  to='/all' style={{textDecoration:'none'}}>
+        <Link  to='/' style={{textDecoration:'none'}}>
           <li className="border">All</li>
         </Link>
-          <Link to='mobile' style={{textDecoration:'none'}}>
+          <Link to='/mobile' style={{textDecoration:'none'}}>
 
              <li className="border">Mobile</li>
           </Link>
-          <Link to='laptop' style={{textDecoration:'none'}}>
+          <Link to='/laptop' style={{textDecoration:'none'}}>
 
                 <li className="border">Laptop</li>
           </Link>
-          <Link to='computer' style={{textDecoration:'none'}}>
+          <Link to='/computer' style={{textDecoration:'none'}}>
 
                 <li className="border">Computer</li>
           </Link>
-          <Link to='accessories' style={{textDecoration:'none'}}>
+          <Link to='/accessories' style={{textDecoration:'none'}}>
                 <li className="">Accessories</li>
 
           </Link>
-          <Link to='watch'style={{textDecoration:'none'}}>
+          <Link to='/watch'style={{textDecoration:'none'}}>
 
                 <li className="border">Watch</li>
           </Link>

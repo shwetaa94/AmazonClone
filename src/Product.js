@@ -8,12 +8,12 @@ function Card(props) {
     <>
     
       <div className="products">
-  {/* <Link to={`/${props.id}`} style={{textDecoration:'none', color:'black'}}> */}
+  <Link to={`id/${props.id}`} style={{textDecoration:'none', color:'black'}}>
         <h3>{props.name}</h3>
 
         <img src={props.image} alt="product-imge" />
 
-  {/* </Link> */}
+  </Link>
         <div className="pandc">
           <h4> Rs. {props.price}</h4>
           <button> Add to cart</button>
