@@ -1,8 +1,4 @@
-.checkout__ad
-{
-    width:100%;
 
-}
 .checkoutproduct{
     margin:5px 10px;
     display:flex;
@@ -19,6 +15,7 @@
  .checkoutproduct h2, h3{
      line-height: 30px;
      margin-left:40px;
+    
  }
 .checkoutproduct button{
    

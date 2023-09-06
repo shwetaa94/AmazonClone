@@ -9,8 +9,6 @@ const Checkout = () => {
   //  console.log(basket);
   return (
    <div className="checkout">
-      <img src="https://tse4.mm.bing.net/th?id=OIP.5K90b3vNeGN3GYkzcd59SAHaBs&pid=Api&P=0&h=180 " 
-      className="checkout__ad" alt="" />
      
       {(basket.length===0 )?(
 
@@ -18,9 +16,9 @@ const Checkout = () => {
               <h2 className='checkout__title'>Your shopping cart is empty</h2>
             </div>
       ):(
-        <div> 
+        <div style={{textlign:'ceneter'}}> 
              <h2>This is your Shopping Basket</h2>
-             <h2>your total items are: {basket.length}</h2> 
+             <h2>your total items are:<span style={{color:'red'}}>{basket.length}</span> </h2> 
                {/* list out all checkout products */}
                {
                  basket.map((item)=>{
