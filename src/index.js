@@ -4,10 +4,12 @@ import "./index.css";
 import App from "./App";
 import {BrowserRouter} from 'react-router-dom'
 import {AppProvider} from './ProductContext'
+import reducer, {initialState} from './Reducer'
+//this inittal-state send data to appProvier intialState= {inittal-state}
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 
-    <AppProvider>
+    <AppProvider initialState={initialState} reducer={reducer}>
        <BrowserRouter>
            <App />
        </BrowserRouter>

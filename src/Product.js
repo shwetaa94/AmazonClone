@@ -1,9 +1,23 @@
 import React, { useState, useEffect } from "react";
 import "./Product.css";
 import { Link } from "react-router-dom";
+import { useAppValue } from "./ProductContext";
 
 
 function Card(props) {
+   const[{},dispatch]=useAppValue();
+   const addtoBasket=()=>{
+      dispatch({
+        type:'ADD_TO_BASKET',
+        item:{
+          id: props.id,
+          title: props.title,
+          image: props.image,
+          price: props.price,
+        }
+      })
+   }
+
   return (
     <>
     
@@ -16,7 +30,7 @@ function Card(props) {
   </Link>
         <div className="pandc">
           <h4> Rs. {props.price}</h4>
-          <button> Add to cart</button>
+          <button onClick={addtoBasket}> Add to cart</button>
         </div>
       </div>
   </>

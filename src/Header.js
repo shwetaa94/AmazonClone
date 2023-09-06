@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import './header.css';
 import RoomIcon from '@material-ui/icons/Room';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import {Link} from 'react-router-dom';
-
+import { useAppValue } from "./ProductContext";
 
 
 function Header(){
+
+    // const[{basket}]=useAppValue();
+    const[{basket},dispatch]=useAppValue();
+
     return(
         <>
             <div className="header">
@@ -51,9 +55,9 @@ function Header(){
                 </div>
 
                 <div className="  remaining border">
-                    <Link to ="/cart" className="linkk">
+                    <Link to ="/checkout" className="linkk">
                        <div>
-                            <div className="cartno">2</div>
+                            <div className="cartno">{basket?.length}</div>
         
                             <ShoppingCartIcon className="carticon"/>
                         </div>

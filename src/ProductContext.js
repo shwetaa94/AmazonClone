@@ -1,16 +1,15 @@
-import React,{Children, createContext, useEffect, useReducer} from 'react'
+//set up data layer
+//we need this to track the basket
+import React,{ createContext, useContext, useReducer} from 'react'
 
-const AppContext = createContext();
-// const API="https://api.pujakaitem.com/api/products";
-
-
-const AppProvider = ( {children} ) => {
-    
-
-return(
-    <AppContext.Provider value="shweta">
+// this is data layer ---warehouse
+export const AppContext = createContext();
+//build a provider ---our deleievrboy
+export const AppProvider = ( {reducer,initialState,children} ) => {
+   return(
+    <AppContext.Provider value={useReducer(reducer,initialState)}>
         {children}
     </AppContext.Provider>
 );
 }
-export {AppContext,AppProvider}
+export const useAppValue=()=>useContext(AppContext);

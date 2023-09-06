@@ -8,7 +8,6 @@ import Home from './Home';
 import Product from './Product';
 import ProductList from './ProductList';
 import ProductSinglePage from './ProductSinglePage.js';
-
 function App() {
   return (
   <>
